@@ -117,6 +117,7 @@ public class StartGameActivity extends AppCompatActivity {
         Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dialog_result);
+        dialog.setCanceledOnTouchOutside(false);
 
         Button play = dialog.findViewById(R.id.plyBtn);
         Button cancel = dialog.findViewById(R.id.exitBtn);
@@ -138,6 +139,7 @@ public class StartGameActivity extends AppCompatActivity {
     private void showWinnerDialog(final int winner) {
         Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setCanceledOnTouchOutside(false);
         dialog.setContentView(R.layout.dialog_result);
         String resultText = (winner ==1 ) ? "Player 1 wins the game":"Player 2 wins the game";
 
